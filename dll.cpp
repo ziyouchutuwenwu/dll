@@ -19,7 +19,7 @@ BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fwdreason, LPVOID lpvReserved)
     switch( fwdreason)
     {
         case DLL_PROCESS_ATTACH:
-            if ( !CModuleHelper::isTargetExe("regedit.exe") )
+            if ( !CModuleHelper::isTargetExe(TARGET_EXE_NAME) )
             {
                 result = false;
             }
@@ -29,7 +29,7 @@ BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fwdreason, LPVOID lpvReserved)
             }
             break;
         case DLL_PROCESS_DETACH:
-            if ( CModuleHelper::isTargetExe("regedit.exe") )
+            if ( CModuleHelper::isTargetExe(TARGET_EXE_NAME) )
             {
                 FreeLibraryAndExitThread(hinstDLL, 0);
             }
