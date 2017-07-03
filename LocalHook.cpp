@@ -5,7 +5,6 @@
 
 #include "LocalHook.h"
 //---------------------------------------------------------------------------
-#pragma package(smart_init)
 
 static CLocalHook* _shareInstance = NULL;
 

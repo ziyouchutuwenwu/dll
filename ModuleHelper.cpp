@@ -17,5 +17,3 @@ BOOL CModuleHelper::isTargetExe(AnsiString targetName)
     
     return true;
 }
-
-#pragma package(smart_init)
