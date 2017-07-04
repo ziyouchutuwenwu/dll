@@ -3,8 +3,8 @@
 #include <windows.h>
 #include <process.h>
 #include "dll.h"
-#include "Unit1.h"
-#include "ModuleHelper.h"
+#include "./Unit1/Unit1.h"
+#include "./ModuleHelper/ModuleHelper.h"
 #pragma hdrstop
 
 #pragma argsused

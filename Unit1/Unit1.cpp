@@ -4,7 +4,7 @@
 #pragma hdrstop
 
 #include "Unit1.h"
-#include "dll.h"
+#include "../dll/dll.h"
 //---------------------------------------------------------------------------
 #pragma resource "*.dfm"
 TForm1 *Form1;

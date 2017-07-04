@@ -7,7 +7,7 @@
 #include <Controls.hpp>
 #include <StdCtrls.hpp>
 #include <Forms.hpp>
-#include "LocalHook.h"
+#include "../LocalHook/LocalHook.h"
 //---------------------------------------------------------------------------
 class TForm1 : public TForm, public ILocalHookDelegate
 {
