@@ -4,7 +4,7 @@
   <MACROS>
     <VERSION value="BCB.06.00"/>
     <PROJECT value="dll.dll"/>
-    <OBJFILES value="dll.obj DataConverter\DataConverter.obj ModuleHelper\ModuleHelper.obj 
+    <OBJFILES value="dll\dll.obj DataConverter\DataConverter.obj ModuleHelper\ModuleHelper.obj 
       LocalHook\LocalHook.obj Unit1\Unit1.obj"/>
     <RESFILES value=""/>
     <IDLFILES value=""/>
@@ -18,7 +18,7 @@
       vcldbx.bpi ibxpress.bpi cds.bpi dsnap.bpi bdecds.bpi qrpt.bpi teeui.bpi 
       teedb.bpi tee.bpi dss.bpi teeqr.bpi visualclx.bpi visualdbclx.bpi 
       dsnapcrba.bpi dsnapcon.bpi bcbsmp.bpi bcbie.bpi"/>
-    <PATHCPP value=".;DataConverter;ModuleHelper;LocalHook;Unit1"/>
+    <PATHCPP value=".;dll;DataConverter;ModuleHelper;LocalHook;Unit1"/>
     <PATHPAS value=".;"/>
     <PATHRC value=".;"/>
     <PATHASM value=".;"/>
@@ -28,13 +28,13 @@
     <USERDEFINES value=""/>
     <SYSDEFINES value="NO_STRICT"/>
     <MAINSOURCE value="dll.bpf"/>
-    <INCLUDEPATH value="Unit1;LocalHook;ModuleHelper;DataConverter;&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;..;$(BCB)\include;$(BCB)\include\vcl"/>
-    <LIBPATH value="Unit1;LocalHook;ModuleHelper;DataConverter;&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;..;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <INCLUDEPATH value="dll;Unit1;LocalHook;ModuleHelper;DataConverter;&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;..;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="dll;Unit1;LocalHook;ModuleHelper;DataConverter;&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;..;$(BCB)\lib\obj;$(BCB)\lib"/>
     <WARNINGS value="-w-par"/>
     <OTHERFILES value=""/>
   </MACROS>
   <OPTIONS>
-    <IDLCFLAGS value="-IUnit1 -ILocalHook -IModuleHelper -IDataConverter 
+    <IDLCFLAGS value="-Idll -IUnit1 -ILocalHook -IModuleHelper -IDataConverter 
       -I&quot;C:\Program Files\Borland\CBuilder6\Projects&quot; -I.. -I$(BCB)\include 
       -I$(BCB)\include\vcl -src_suffix cpp -boa"/>
     <CFLAG1 value="-WD -O2 -H=$(BCB)\lib\vcl60.csm -Hc -w- -Vx -Ve -X- -a8 -b- -k- -vi -tWD 
@@ -53,8 +53,7 @@
   </LINKER>
   <FILELIST>
       <FILE FILENAME="dll.bpf" FORMNAME="" UNITNAME="dll" CONTAINERID="BPF" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME="dll.cpp" FORMNAME="" UNITNAME="dll" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME="dll.h" FORMNAME="" UNITNAME="dll.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="dll\dll.cpp" FORMNAME="" UNITNAME="dll" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="DataConverter\DataConverter.cpp" FORMNAME="" UNITNAME="DataConverter" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="ModuleHelper\ModuleHelper.cpp" FORMNAME="" UNITNAME="ModuleHelper" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="LocalHook\LocalHook.cpp" FORMNAME="" UNITNAME="LocalHook" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
