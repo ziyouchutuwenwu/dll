@@ -7,7 +7,6 @@
 #include "../dll/dll.h"
 //---------------------------------------------------------------------------
 #pragma resource "*.dfm"
-TForm1 *Form1;
 //---------------------------------------------------------------------------
 
 __fastcall TForm1::TForm1(TComponent* Owner)
@@ -45,5 +44,3 @@ void TForm1::onHookKeyPressed(int key)
         Show();
     }
 }
-
-

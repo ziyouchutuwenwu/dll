@@ -25,8 +25,5 @@ public:		// User declarations
         MESSAGE_HANDLER(WM_SYSCOMMAND, TMessage ,onSysCommand)
     END_MESSAGE_MAP(TForm)
 };
-//---------------------------------------------------------------------------
-extern PACKAGE TForm1 *Form1;
-//---------------------------------------------------------------------------
+
 #endif
- 
