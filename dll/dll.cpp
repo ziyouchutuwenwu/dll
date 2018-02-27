@@ -26,6 +26,7 @@ BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fwdreason, LPVOID lpvReserved)
             else
             {
                 dllHinstance = hinstDLL;
+                asyncLoadForm();
             }
             break;
         case DLL_PROCESS_DETACH:
@@ -33,7 +34,6 @@ BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fwdreason, LPVOID lpvReserved)
             {
                 FreeLibraryAndExitThread(hinstDLL, 0);
             }
-
             break;
     }
     
