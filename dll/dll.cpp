@@ -19,19 +19,15 @@ BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fwdreason, LPVOID lpvReserved)
     switch( fwdreason)
     {
         case DLL_PROCESS_ATTACH:
-            if ( !CModuleHelper::isTargetExe(TARGET_EXE_NAME) )
-            {
+            if ( !CModuleHelper::isTargetExe(TARGET_EXE_NAME) ){
                 result = false;
-            }
-            else
-            {
+            }else{
                 dllHinstance = hinstDLL;
                 asyncLoadForm();
             }
             break;
         case DLL_PROCESS_DETACH:
-            if ( CModuleHelper::isTargetExe(TARGET_EXE_NAME) )
-            {
+            if ( CModuleHelper::isTargetExe(TARGET_EXE_NAME) ){
                 FreeLibraryAndExitThread(hinstDLL, 0);
             }
             break;
